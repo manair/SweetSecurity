@@ -12,7 +12,7 @@ def install(csKey):
 	print "Installing Critical Stack Agent"
 	print "  Downloading Critical Stack Agent"
 	if cpuArch == 'x86':
-		os.popen('sudo wget http://intel.criticalstack.com/client/critical-stack-intel-i386.deb 2>&1').read()
+		os.popen('sudo wget https://packagecloud.io/criticalstack/critical-stack-intel/packages/debian/wheezy/critical-stack-intel_0.5.7_i386.deb/download.deb 2>&1').read()
 		if not os.path.isfile('critical-stack-intel-i386.deb'):
 			sys.exit('Error downloading critical stack agent')
 		print "  Installing Critical Stack Agent"
@@ -22,7 +22,7 @@ def install(csKey):
 		print "  Cleaning Up Installation Files"
 		os.remove('critical-stack-intel-i386.deb')
 	elif cpuArch == 'x86_64':
-		os.popen('sudo wget http://intel.criticalstack.com/client/critical-stack-intel-amd64.deb 2>&1').read()
+		os.popen('sudo wget https://packagecloud.io/criticalstack/critical-stack-intel/packages/debian/wheezy/critical-stack-intel_0.5.7_amd64.deb/download.deb 2>&1').read()
 		if not os.path.isfile('critical-stack-intel-amd64.deb'):
 			sys.exit('Error downloading critical stack agent')
 		print "  Installing Critical Stack Agent"

@@ -15,7 +15,7 @@ def install(chosenInterface,webServer):
 	if broInstalled==False:
 		print "Installing Bro IDS"
 		print "  Downloading Bro IDS 2.5.1"
-		os.popen('sudo wget https://www.bro.org/downloads/bro-2.5.1.tar.gz 2>&1').read()
+		os.popen('sudo wget https://download.zeek.org/bro-2.5.1.tar.gz 2>&1').read()
 		if not os.path.isfile('bro-2.5.1.tar.gz'):
 			sys.exit('Error downloading Bro')
 		if not hashCheck.checkHash('bro-2.5.1.tar.gz'):
